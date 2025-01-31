@@ -1,0 +1,16 @@
+version: '3.1'
+services:
+  db:
+    image: postgres:latest
+    container_name: versicherungsvergleich_database
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: versicherung
+      POSTGRES_DB: versicherungsvergleich-database
+    ports:
+      - "5432:5432"  # Map host port 5432 to container port 5432
+    volumes:
+      - postgresdata:/var/lib/postgresql/data
+
+volumes:
+  postgresdata:
