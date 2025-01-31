@@ -16,7 +16,6 @@ $johnDoe->setName('John Doe');
 $johnDoe->setPassword($hashedPassword);
 $manager->persist($johnDoe);
 
-// Create Jane Smith
 $hashedPassword2 = password_hash("strawberries", PASSWORD_BCRYPT);
 $janeSmith = new User();
 $janeSmith->setId('2');
